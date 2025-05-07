@@ -1,0 +1,27 @@
+<template>
+    
+    <header class="header">
+       
+        <template if:false={isMobile}>
+        <div class="logo">Portfolio</div>
+        <nav class="navbar">
+            <ul>
+                <li><lightning-button class="nav-link" variant="base" label="My Hobbies" title="portfolio-section" onclick={handleClick}></lightning-button></li>
+                <li><lightning-button class="nav-link" variant="base" label="Experience" title="experience-section" onclick={handleClick}></lightning-button></li>
+                <li><lightning-button class="nav-link" variant="base" label="Contact Me" title="contact-section" onclick={handleClick}></lightning-button></li>
+            </ul>
+        </nav>
+         </template>
+        <template if:true={isMobile}>
+         <div class="mobile-menu">
+            <ul class="navbar-links">
+                <div class="logo">Portfolio</div>
+                <li><lightning-button class="nav-link" variant="base" label="My Hobbies" title="My Hobbies" onclick={handleClick}></lightning-button></li>
+                <li><lightning-button class="nav-link" variant="base" label="Experience" title="Experience" onclick={handleClick}></lightning-button></li>
+                <li><lightning-button class="nav-link" variant="base" label="Contact Me" title="Contact Me" onclick={handleClick}></lightning-button></li>
+            </ul>
+        </div>
+        </template>
+    </header>
+    
+</template>

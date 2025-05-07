@@ -1,0 +1,88 @@
+<template>
+
+    <template if:true={isLoading}>
+        <section id="onload" class="onload">
+        <img  src={theGif}></img>
+       <!-- <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>-->
+        </section>
+    </template>
+    <template if:false={isLoading}>
+    <!-- About Section -->
+    <section id="about" class="about-section" style={getBackgroundImage} size="12" medium-size="6" large-size="4">
+   
+        <div class="intro-text" >
+            <h2>HI!, I'M JAHAN</h2>
+            
+            <p>I'm a passionate Teacher from Turkmenistan</p>
+            <p>, here for master degree since 2023.</p>
+       
+          
+            <button onclick={scrollToPortfolio} class="cta-button slds-float_left" >Check out About Me</button>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <h2>My Hobbies</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src={guitarPNG} alt="Guitar Playing" />
+                <h3>Playing Guitar</h3>
+                <p>I Love playing guitar which i actually learned from youtube</p>
+            </div>
+            <div class="portfolio-item">
+                <img src={teachingGif} alt="teaching" />
+                <h3>Teaching</h3>
+                <p>I absolutely love teaching and it has been my passion since my child hood</p>
+            </div>
+            <div class="portfolio-item">
+                <img src={cookHobby} alt="Cooking" />
+                <h3>Cooking</h3>
+                <p>Cooking is a kind of hobby that i got fond of with time.</p>
+            </div>
+             <div class="portfolio-item">
+                <img src={badmintoonHobby} alt="Badminton" />
+                <h3>Badminton</h3>
+                <p>Badminton is what i have been playing from my child hood with my freinds.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <h2>Experience</h2>
+        <ul class="experience-list">
+            <li>
+                <h3>School Teacher</h3>
+                <p>N27 (2015 - 2023)</p>
+                <p>Played a key role in fostering the intellectual and personal growth of students.By Creating engaging lesson plans, delivered instructional content, and facilitated classroom activities to ensure students understood key concepts </p>
+            </li>
+            <li>
+                <h3>Masters</h3>
+                <p> North american university in Houston (2023 - 2025)</p>
+                <p>During my Master’s in Computer Science at a North American university in Houston, I gained in-depth knowledge and hands-on experience in a wide range of computer science topics. My studies included advanced algorithms, data structures, machine learning, artificial intelligence, database systems, software engineering, and computer networks</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form>
+            <lightning-input label="Your Name" required class="dataInput"></lightning-input>
+            <lightning-input label="Your Email" type="email" required class="dataInput"></lightning-input>
+            <lightning-textarea label="Message" title="sendMessage" required class="dataInput"></lightning-textarea>
+            <lightning-button variant="brand" label="Send Message" onclick={handleContactSubmit}></lightning-button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Jahan Agabayeva. All Rights Reserved.</p>
+        <div class="social-links">
+           <!-- <a href="https://linkedin.com/in/johndoe" target="_blank">LinkedIn</a>
+            <a href="https://github.com/johndoe" target="_blank">GitHub</a>-->
+        </div>
+    </footer>
+    </template>
+</template>
